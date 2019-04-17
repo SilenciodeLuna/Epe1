@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-icon name="logo-ionitron"></ion-icon>
+    <ion-title>
+      EPE1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="assets\img\ipch.jpg">
+    <ion-card-header>
+      <ion-card-subtitle>Carta de Presentación</ion-card-subtitle>
+      <ion-card-title>Evaluación de Asignaturas</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Esta app fue desarrollada para satisfacer las necesidades de los alumnos 
+      de la Institución IPCHILE. Se podrá obtener según horas académicas: promedio,
+      nota de presentación, si rendirá exámen(es), nota mínima del exámen para aprobar
+      el ramo y promedio final una vez rendido el examen.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>Ingrese sus datos:</ion-card-content>
+    <ion-item>
+        <ion-input placeholder="Nombre y Apellido" [(ngModel)]="txt"></ion-input>
+      </ion-item>
+</ion-card>
+
+  <ion-card>
+      <ion-card-content>
+          Seleccione el botón correspondiente según las horas académicas:
+        </ion-card-content>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="attach" slot="start"></ion-icon>
+      <ion-label>32 horas</ion-label>
+      <ion-button size="small" shape="round" slot="end" (click)="IrH32()">Ingresar</ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="attach" slot="start"></ion-icon>
+      <ion-label>64 horas</ion-label>
+      <ion-button size="small" shape="round" slot="end" (click)="IrH64()">Ingresar</ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="attach" slot="start"></ion-icon>
+      <ion-label>96 horas</ion-label>
+      <ion-button size="small" shape="round" slot="end" (click)="IrH96()">Ingresar</ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="attach" slot="start"></ion-icon>
+      <ion-label>128 horas</ion-label>
+      <ion-button size="small" shape="round" slot="end" (click)="IrH128()">Ingresar</ion-button>
+    </ion-item>
+  </ion-card>
+</ion-card>
+
+  <ion-item>
+      <ion-buttons slot="end">
+    <ion-button size="large" color="primary" (click)="AcercaDe()">
+      <ion-icon slot="end" name="logo-ionitron"></ion-icon>
+      Acerca de
+    </ion-button>
+  </ion-buttons>
+  </ion-item>
+</ion-content>

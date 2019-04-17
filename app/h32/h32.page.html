@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-icon name="logo-ionitron"></ion-icon>
+    <ion-title>EPE1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <img src="assets\img\ipchi.jpg">
+        <ion-card-header>
+          <ion-card-title>32 Horas Académicas</ion-card-title>
+          <ion-item>
+            <ion-label color="primary">
+                Estimado(a): {{txt}}
+              </ion-label>
+        </ion-item>
+          <ion-card-subtitle>*Ingrese sus NOTAS sin puntos ni comas</ion-card-subtitle>
+        </ion-card-header>
+
+    <ion-item>
+        <ion-input placeholder="Ingrese EPE1:" [(ngModel)]="epe1"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-input placeholder="Ingrese EPE2:" [(ngModel)]="epe2"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input placeholder="Ingrese EPE3:" [(ngModel)]="epe3"></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-input placeholder="Ingrese EVA1:" [(ngModel)]="eva1"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-input placeholder="Ingrese EVA2:" [(ngModel)]="eva2"></ion-input>
+              </ion-item>
+
+              <ion-card-header>
+                <ion-card-title text wrap>Condición:</ion-card-title>
+                <ion-item>
+                  <ion-label>{{displayString}}</ion-label>
+                </ion-item>
+                </ion-card-header>
+
+                <ion-label text-wrap>* Nota minima para eximirse "5.5"</ion-label>
+
+                <ion-grid>
+                  <ion-row>
+                    <ion-col>
+                  <ion-button size="small" shape="round" color="primary" 
+                  (click)="calcularPromedio()">Promedio</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+              <ion-button size="small" shape="round" color="primary" 
+              (click)="calcularNotaPresentacion()">Nota de Presentación</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+                <ion-grid>
+                  <ion-row>
+                    <ion-col>
+                  <ion-button size="small" shape="round" color="primary" 
+                  (click)="calcularNotaExamen()">Nota Mínima de Exámen</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+
+                  <ion-item>
+                      <ion-input placeholder="Ingrese Nota del Exámen:" [(ngModel)]="exam"></ion-input>
+                    </ion-item>
+
+                    <ion-label text-wrap>* Nota minima de aprobación "4.0"</ion-label>
+
+                    <ion-grid>
+                      <ion-row>
+                        <ion-col>
+                        <ion-button size="small" shape="round" color="primary" 
+                        (click)="calcularPromedioFinal()">Promedio Final</ion-button>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+              
+              <ion-item>
+                  <ion-buttons slot="end">
+                      <ion-button size="small" color ="primary"
+                      (click)="Volver()">
+                        <ion-icon slot="start" name="arrow-back"></ion-icon>
+                        Volver al Menú
+                      </ion-button>
+                    </ion-buttons>
+                </ion-item>
+    </ion-card>
+</ion-content>
